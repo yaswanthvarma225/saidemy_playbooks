@@ -1,0 +1,10 @@
+---
+- hosts: webservers
+  become: yes
+  tasks:
+    - name: copying a file
+      copy:
+        src: /home/yash/playbooks/index.html
+        dest: /opt
+        owner: yash
+

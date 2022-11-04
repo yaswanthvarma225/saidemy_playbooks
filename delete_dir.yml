@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: deleting directory
+      file:
+        path: /home/yash/dir1
+        state: absent

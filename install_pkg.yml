@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: install a package
+      yum:
+        name: git
+        state: present
+

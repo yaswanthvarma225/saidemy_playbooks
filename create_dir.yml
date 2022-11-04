@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: creating a directory
+      file:
+        path: /home/yash/dir1
+        state: directory

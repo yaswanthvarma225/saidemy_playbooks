@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: creating a file
+      file:
+        path: /home/yash/file1.yml
+        state: touch
