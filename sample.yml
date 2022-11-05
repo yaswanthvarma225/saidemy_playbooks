@@ -1,0 +1,15 @@
+---
+- name: my sample playbook
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: create a file with ansible playbook
+      file: path=/tmp/yash.txt state=file
+
+    - name: crate a directory with ansible playbook
+      file: path=/tmp/varmadir state=directory
+
+    - name: copying a file with ansible playbook
+      copy: src=./linux.txt dest=/home/yash
+

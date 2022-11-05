@@ -1,0 +1,16 @@
+---
+- name: My loops playbook
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: installig multiple softwares
+      yum: name='{{item}}'  state=installed
+      with_items:
+        - httpd
+        - git
+        - docker
+        - java
+        - mysql
+        - tree
+
